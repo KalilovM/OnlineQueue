@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView,DeleteView
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .forms import UserRegistrationForm, TalonForm
@@ -21,7 +21,6 @@ def register(request):
     context = {'form': form}
     return render(request, 'register.html', context)
 
-
 # Talon creation
 class TalonListView(ListView):
     model = Talon
@@ -29,17 +28,28 @@ class TalonListView(ListView):
     template_name = 'talon_list.html'
 
 
+
+
 class TalonCreateView(CreateView):
     model = Talon
     form_class = TalonForm
     template_name = 'talon_form.html'
     success_url = reverse_lazy('talon_changelist')
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 
 class TalonUpdateView(UpdateView):
     model = Talon
     form_class = TalonForm
     template_name = 'talon_form.html'
+    success_url = reverse_lazy('talon_changelist')
+
+class TalonDeleteView(DeleteView):
+    model = Talon
+    template_name = 'talon_confirm_delete.html'
     success_url = reverse_lazy('talon_changelist')
 
 
