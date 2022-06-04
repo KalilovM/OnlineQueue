@@ -1,55 +1,118 @@
-{% extends 'base.html' %}
- 
-{% block title %}Django Chained Dropdown List - Select Box using jQuery Ajax bank filial{% endblock %}
- 
-{% block content %}
-    {% if user.is_authenticated %}
-    <div class="alert alert-success" role="alert">
-        <h3>Welcome {{ user.username }}!</h3>
-        <a href="{% url 'logout' %}">Logout?</a>
-    </div>
-  <table class="table table-striped custab">
-    <thead>
-  <a href="{% url 'talon_add' %}" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new talon</a>
-        <tr>
-        <th>Number</th>
-        <th>Bank</th>
-        <th>Filial</th>
-            {% if user.is_superuser %}
-                <th class="text-center">User</th>
-                <th class="text-center">Action</th>
-            {% endif %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for talon in ticket %}
-{% if talon.user == user or user.is_superuser%}
+{% extends 'base2.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static './css/ticket.css' %}" />
+{% endblock head %} {% block title %}Talon List{% endblock %} {% block content%}
+<section class="tickets">
+	<div class="tecket-border">
+		<div class="ticket-navbar">
+			<div class="tick-logo">
+				<h1>My Tickets</h1>
+			</div>
+			<div class="tick-button">
+				<a href="{% url 'talon_add' %}" id="red"
+					><img src="{% static './img/circle-plus.svg' %}" alt="" />Create
+					new</a
+				>
+				<a href="#" id="grey"
+					><img src="{% static './img/person.svg' %}" alt="" />Go to my
+					profile</a
+				>
+			</div>
+		</div>
+		<div class="thisOneTicket">
+			<div class="killme">
+				<div class="logott">
+					<h1>Active:</h1>
+					<hr />
+				</div>
+				{% for act in acts %}
+				<div class="timer">
+					<div class="tticcket">
+						<div class="hesdT"><h1>{{act.bank}}</h1></div>
+						<div class="mainT">
+							<h3>Ticket №</h3>
+							<h1>{{ act.number }}</h1>
+							<h3>Sevice</h3>
+							<h2>{{act.service}}</h2>
+						</div>
+						<div class="footerT">
+							<a href="#" class="nonline">
+								<img src="{% static './img/Ellipse 16.svg' %}" alt="" /> 3
+								persons ahead of you</a
+							>
+							<br />
+							<a href="#">Today at {{act.arriveTime}}</a>
+						</div>
+					</div>
+					<label for="timer">Waiting time:</label>
+					<input
+						type="time"
+						id="appt"
+						name="timer"
+						min="09:00"
+						max="18:00"
+						required
+					/>
+				</div>
+				{% endfor %}
+			</div>
+			
+			<div class="killme">
+				<div class="logott">
+					<h1>Passed:</h1>
+					<hr />
+				</div>
+				{% for psd in psds %}
+				<div class="timer">
+					<div class="tticcket">
+						<div class="hesdT passed"><h1>{{psd.bank}}</h1></div>
+						<div class="mainT" id="passed">
+							<h3>Ticket №</h3>
+							<h1>{{psd.number}}</h1>
+							<h3>Sevice</h3>
+							<h2>{{psd.service}}</h2>
+						</div>
+						<div class="footerT">
+							<a href="#" class="nonline">
+								<img src="{% static './img/Ellipse grey.svg' %}" alt="" /> 3
+								persons ahead of you</a
+							>
+							<br />
+							<a href="#">Today at {{psd.arriveTime}}</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			
 
-        <tr>
-          <td>
-              {{ talon.number }}
-          </td>
-          <td>{{ talon.bank.name }}</td>
-          <td>{{ talon.filial.name }}</td>
-            {% if user.is_superuser %}
-                <td class="text-center">{{ talon.user }}</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="{% url 'talon_change' talon.pk %}"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="{% url 'talon_delete' talon.pk %}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-            {% endif %}
-        </tr>
-{% endif %}
-
-      {% empty %}
-        <tr>
-          <td colspan="4">No talon in the database. <a href="{% url 'talon_add' %}">Add the first talon</a>.</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-    {% else %}
-        <div class="alert alert-success" role="alert">
-        <h3>Welcome!</h3>
-        <a href="{% url 'register' %}">Signup</a>
-        <a href="{% url 'login' %}">Login</a>
-    </div>
-{% endif %}
+			<div class="killme">
+				<div class="logott">
+					<h1>Missed:</h1>
+					<hr />
+				</div>
+				{% for msd in msds %}
+				<div class="timer">
+					<div class="tticcket">
+						<div class="hesdT passed"><h1>{{msd.bank}}</h1></div>
+						<div class="mainT" id="passed">
+							<h3>Ticket №</h3>
+							<h1>{{msd.number}}</h1>
+							<h3>Sevice</h3>
+							<h2>{{msd.service}}</h2>
+						</div>
+						<div class="footerT">
+							<a href="#" class="nonline">
+								<img src="{% static './img/Ellipse grey.svg' %}" alt="" /> 3
+								persons ahead of you</a
+							>
+							<br />
+							<a href="#">Today at {{msd.arriveTime}}</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				</div>
+				
+				</div>
+</section>
 {% endblock %}

@@ -1,0 +1,232 @@
+* {
+	/* text-decoration: none; */
+	margin: 0;
+	padding: 0;
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.nonline {
+	text-decoration: none;
+}
+body {
+	box-sizing: border-box;
+}
+
+header {
+	background-size: cover;
+}
+
+/* NAV BAR */
+
+.navBar {
+	display: grid;
+	grid-template-columns: 3fr 4fr;
+	height: 200px;
+	position: relative;
+}
+
+.main-back {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	z-index: -10;
+}
+
+.logo {
+	display: grid;
+	justify-content: start;
+	align-items: center;
+}
+
+.logo img {
+	margin: 20% 0 30% 30%;
+}
+
+.navBar-child {
+	display: grid;
+}
+
+.navBar-child ul {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 2fr;
+	grid-gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.navBar-child li {
+	display: grid;
+	justify-content: center;
+	color: #fff;
+}
+
+.nav-button {
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+.login {
+	padding: 5px 30px;
+	border-radius: 18px;
+	border: 1px solid #fff;
+}
+
+/* FROM */
+
+.welcome {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.border-shadow {
+	box-shadow: 1px 1px 20px 20px rgba(181, 181, 181, 0.593);
+	border-radius: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	width: 1026px;
+	height: 635px;
+}
+
+.rigth-form-cal {
+	display: grid;
+	justify-content: center;
+	height: 635px;
+}
+
+.odin {
+	text-align: center;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	color: rgba(0, 46, 149, 1);
+}
+
+.odin h1 {
+	font-size: 40px;
+	font-weight: 400;
+
+	margin-top: 20%;
+}
+
+.odin h3 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.dva {
+	color: rgba(0, 46, 149, 1);
+	width: 430px;
+}
+
+.dva label {
+	font-size: 18px;
+	font-weight: 400;
+	margin-left: 5%;
+}
+
+.dva input {
+	border: 2px solid rgba(0, 46, 149, 1);
+	width: 430px;
+	height: 60px;
+	background-color: #f1f6ff;
+	border-radius: 50px;
+	margin-bottom: 10px;
+}
+
+.tri {
+	font-size: 18px;
+	margin-top: -12%;
+	height: 70%;
+}
+
+#fp {
+	float: right;
+	margin-right: 3%;
+	font-size: 18px;
+	color: rgba(0, 46, 149, 1);
+}
+
+.tri input {
+	margin-left: 5%;
+}
+
+.tri label {
+	color: rgba(0, 46, 149, 1);
+}
+
+.chetyre {
+	text-align: center;
+	position: relative;
+	margin-top: -20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.qu {
+	margin-top: 5%;
+}
+
+.qu a {
+	color: rgba(0, 46, 149, 1);
+}
+
+#mainLogin {
+	font-size: 20px;
+	padding: 10px 50px;
+	border-radius: 50px;
+	background-color: rgba(0, 46, 149, 1);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: rgba(0, 0, 107, 1);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.logo-footer img {
+	width: 40%;
+	height: auto;
+	margin: 20px 50px;
+}
+
+.link {
+	display: grid;
+	align-items: flex-end;
+}
+
+.link ul {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.link li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20%;
+}
+
+.link a {
+	font-size: 18px;
+	color: #fff;
+	margin-left: 15px;
+}

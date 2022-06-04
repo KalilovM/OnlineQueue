@@ -1,0 +1,321 @@
+* {
+    /* text-decoration: none; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    
+}
+
+.nonline {
+    text-decoration: none;
+}
+body {
+    box-sizing: border-box;
+}
+
+
+/* NAV BAR */
+
+.navBar {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    height: 200px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.main-back {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    z-index: -10;
+}
+
+.logo {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.logo img {
+    margin: 20% 0 30% 30%;
+}
+
+.navBar-child {
+    display: grid;
+
+}
+
+.navBar-child ul {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.navBar-child li {
+    display: grid;
+    justify-content: center;
+    color: #fff;
+}
+
+.nav-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.login {
+    padding: 5px 30px;
+    border-radius: 18px;
+    border: 1px solid #fff;
+}
+
+/* TICKETS */
+
+.tickets {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.tecket-border {
+    width: 80%;
+    height: 120vh;
+}
+
+.ticket-navbar {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.tick-logo h1 {
+    color: rgba(0, 46, 149, 1);
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.tick-button {
+    display: flex;
+    justify-content: end;
+}
+
+.tick-button img {
+    margin-right: 5px;
+}
+
+.tick-button a {
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#red {
+    color: rgba(189, 29, 69, 1);
+    border: 1px solid rgba(189, 29, 69, 1);
+}
+
+#grey {
+    color: rgba(122, 122, 122, 1);
+    border: 1px solid rgba(122, 122, 122, 1);
+}
+
+.thisOneTicket {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.killme {
+    /* border: 1px solid red; */
+    box-shadow: 1px 1px 10px 10px rgba(181, 181, 181, 0.593);
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.logott {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0
+}
+
+.logott h1 {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.logott hr {
+    width: 480px;
+}
+
+.timer {
+    width: 65%;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.timer label {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(54, 54, 54, 1);
+    margin-top: 3%;
+}
+
+.timer input {
+    width: 122px;
+    height: 44px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #dfdfdf;
+    border: 2px solid rgba(0, 46, 149, 1);
+    margin-top: 1%;
+}
+
+.tticcket {
+    width: 273px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 1px rgba(181, 181, 181, 0.593);
+}
+
+
+.hesdT {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(0, 46, 149, 1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.passed {
+    background-color: rgba(122, 122, 122, 1);
+}
+
+.mainT {
+    text-align: center;
+}
+
+.mainT h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10%;
+}
+
+#passed h1 {
+    color: rgba(122, 122, 122, 1);
+}
+
+.mainT h1 {
+    font-size: 72px;
+    font-weight: 500;
+    color: rgba(0, 46, 149, 1);
+}
+
+#passed h2 {
+    color: rgba(122, 122, 122, 1);
+}
+
+.mainT h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 46, 149, 1);
+    text-transform: uppercase;
+    margin-top: 3%;
+}
+
+.footerT {
+    /* border: 1px solid pink; */
+    text-align: center;
+    margin: 10% 0;
+}
+
+.footerT a {
+    color: rgba(54, 54, 54, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(0, 0, 107, 1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.logo-footer img {
+    width: 40%;
+    height: auto;
+    margin: 20px 50px;
+}
+
+.link {
+    display: grid;
+    align-items: flex-end;
+}
+
+.link ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.link li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+.link a {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 15px;
+}

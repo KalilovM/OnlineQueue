@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from accounts.models import NewUser
 from .models import *
 import datetime as dt
 
@@ -10,17 +10,16 @@ HOUR_CHOICES = [(dt.time(hour=x), '{:02d}:00'.format(x)) for x in range(0, 24)]
 # from 12am to 1pm
 
 class UserRegistrationForm(UserCreationForm):
-    first_name = forms.CharField(max_length=101)
-    last_name = forms.CharField(max_length=101)
-    email = forms.EmailField()
+    # register new user only by email username and password
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+    username = forms.CharField(max_length=254, help_text='Required. Inform a valid username.')
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
 
     class Meta:
-        model = User
-        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
-
-
-# create class to edit the user profile
-
+        model = NewUser
+        fields = ('email', 'username', 'password1', 'password2')
+        
 
 
 class TalonForm(forms.ModelForm):

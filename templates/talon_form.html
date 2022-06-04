@@ -1,44 +1,49 @@
-{% extends 'base.html' %}
- 
-{% block content %}
-{% load widget_tweaks %}
-  <h2>Talon Form</h2>
- 
-  <form method="post" id="talonForm" data-filials-url="{% url 'ajax_load_filials' %}" novalidate>
-    {% csrf_token %}
-    <table>
-      <!-- {{ form.as_table }} -->
-    </table>
- {% for field in form.visible_fields %}
-   <div class="form-group">
-  <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-  {{ field|add_class:'form-control' }}
-  {% for error in field.errors %}
-    <span class="help-block">{{ error }}</span>
-  {% endfor %}
-   </div>
- {% endfor %}
-    <button type="submit" class="btn btn-success">Save</button>
-    <a href="{% url 'talon_changelist' %}">Home</a>
-  </form>
- 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-    $("#id_bank").change(function () {
-      var url = $("#talonForm").attr("data-filials-url");
-      var bankId = $(this).val();
- 
-      $.ajax({
-        url: url,
-        data: {
-          'bank': bankId
-        },
-        success: function (data) {
-          $("#id_filial").html(data);
-        }
-      });
- 
-    });
-  </script>
- 
+{% extends 'base.html' %} {% block head %}
+<link rel="stylesheet" href="../static/css/create-menu.css" />
+{% endblock head %} {% block content %}
+<section class="menu">
+	<form
+		method="post"
+		id="talonForm"
+		data-filials-url="{% url 'ajax_load_filials' %}"
+		novalidate
+		class="child-menu"
+	>
+		{% csrf_token %}
+		<h1>Creating new ticket</h1>
+		<div class="create">
+			{% for field in form.visible_fields %}
+			<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+			{{ field|add_class:'form-control' }} {% for error in field.errors %}
+			<span class="help-block">{{ error }}</span>
+			{% endfor %}
+		</div>
+
+		<div class="buttonmenu">
+			<button type="submit" href="#" class="nonline">Save</button>
+			<a href="{% url 'talon_changelist' %}" class="nonline" id="cencel"
+				>Cencel</a
+			>
+		</div>
+	</form>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$('#id_bank').change(function () {
+		var url = $('#talonForm').attr('data-filials-url')
+		var bankId = $(this).val()
+
+		$.ajax({
+			url: url,
+			data: {
+				bank: bankId,
+			},
+			success: function (data) {
+				$('#id_filial').html(data)
+			},
+		})
+	})
+</script>
+
 {% endblock %}

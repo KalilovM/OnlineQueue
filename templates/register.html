@@ -1,25 +1,32 @@
-{% extends 'base.html' %}
-{% block title %}
-Register
-{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block head %}
+<link rel="stylesheet" href="../static/css/calendar2.css" />{% endblock head %}
+{% block title %} Registration Page {% endblock title %} {% block content %}
 
+<section class="welcome">
+	<div class="border-shadow">
+		<div class="left-img-cal">
+			<img src="{% static "/img/formIMG.svg" %}" alt="" />
+		</div>
+		<div class="rigth-form-cal">
+			<div class="odin">
+				<h1>Welcome!</h1>
+				<h3>Create new account</h3>
+			</div>
+			<form method="POST" class="dva">
+				{% csrf_token %} {% for field in form %}
 
-<h3>Register here</h3>
-<hr>
+				<label id="castyl" for="name">{{ field.label }}</label><br />
+				{{ field }} {% for error in field.errors %}
+				<small style="color: red">{{ error }}</small>
+				{% endfor %} {% endfor %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-
-    {% for field in form %}
-        <div>
-            <p>{{ field.label }}: <br> {{ field }}</p>
-
-            {% for error in field.errors %}
-                <small style="color: red">{{ error }}</small>
-            {% endfor %}
-        </div>
-    {% endfor %}
-    <button type="submit">Register</button>
-</form>
-{% endblock %}
+				<button type="submit" class="nonline" id="mainLogin">Sign Up</button>
+				<div class="qu">
+					<a href="#" class="nonline top">Don’t have an account?</a>
+					<a href="#" class="top"> Sign In</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+{% endblock content %}

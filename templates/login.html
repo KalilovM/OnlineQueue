@@ -1,19 +1,23 @@
-{% extends 'base.html' %}
-{% block title %}
-Login
-{% endblock %}
-{% block content %}
+{% extends 'base.html' %} {% block head %}
+<link rel="stylesheet" href="../static/css/calendar.css" />
+{% endblock head %} {% block title %} Login {% endblock %} {% block content %}
 
+<h3>login</h3>
 
-    <h3>login</h3>
+<form method="POST" class="dva">
+	{% csrf_token %} {% for field in form %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {% for field in form %}
-        <p>{{ field.label }}: <br> {{ field }}</p>
-    {% endfor %}
-    <button type="submit">Login</button>
+	<label id="castyl" for="name">{{ field.label }}</label><br />
+	{{ field }} {% for error in field.errors %}
+	<small style="color: red">{{ error }}</small>
+	{% endfor %} {% endfor %}
+
+	<button type="submit" class="nonline" id="mainLogin">Login</button>
+	<div class="qu">
+		<a href="{% url 'register' %}" class="nonline top"
+			>Don’t have an account?</a
+		>
+		<a href="{% url 'register' %}" class="top"> Sign In</a>
+	</div>
 </form>
-
-<p>Don't have an account? <a href="{% url 'register' %}">Signup here</a></p>
 {% endblock %}
