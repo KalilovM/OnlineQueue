@@ -1,1 +1,1 @@
-web guicorn Legacy.wsgi:application --log-file -
+web guicorn Legacy.wsgi:application --log-file
