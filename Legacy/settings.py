@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'whitenoise.runserver_nostatic',
+
     'main',
     'accounts',
 ]
@@ -71,12 +73,18 @@ WSGI_APPLICATION = 'Legacy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd12cblgj18kirb',
+        'USER': 'vkfndxdnuxhpmr',
+        'PASSWORD': 'b9889e1b6292c4d536ea7f0102305ce0c818c999519ebde687c39304fd128577',
+        'HOST': 'ec2-52-44-13-158.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
-
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
