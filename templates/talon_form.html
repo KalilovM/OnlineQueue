@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block head %}
-<link rel="stylesheet" href="../static/css/create-menu.css" />
+{% extends 'base2.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static './css/create-menu.css' %}" />
 {% endblock head %} {% block content %}
 <section class="menu">
 	<form
@@ -14,13 +14,15 @@
 		<div class="create">
 			{% for field in form.visible_fields %}
 			<label for="{{ field.id_for_label }}">{{ field.label }}</label>
-			{{ field|add_class:'form-control' }} {% for error in field.errors %}
+			{{ field}} {% for error in field.errors %}
 			<span class="help-block">{{ error }}</span>
-			{% endfor %}
+			{% endfor %} {% endfor %}
 		</div>
 
 		<div class="buttonmenu">
-			<button type="submit" href="#" class="nonline">Save</button>
+			<button id="submitBtn" type="submit" href="#" class="nonline">
+				Save
+			</button>
 			<a href="{% url 'talon_changelist' %}" class="nonline" id="cencel"
 				>Cencel</a
 			>

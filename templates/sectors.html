@@ -1,0 +1,63 @@
+{% extends "baseland2.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="../static/css/stylethree.css">
+{% endblock head %}
+{% block content %}
+<section class="product">
+    <div class="product-text">
+        <h1>Bussiness sectors</h1>
+        <p>Legacy is an individual approach for each company. Choose your <br> own sphere and let’s get started.</p>
+    </div>
+    <div class="main-product">
+        <div class="business-conatiner-child">
+            <div class="business">
+                <div class="nav-bus">
+                    <img src="{% static "./img/fa_bank.svg" %}" alt="">
+                    <h3>Bank and Finance</h3>
+                </div>
+                <ul>
+                    <li>Banks</li>
+                    <li>Financial agencies</li>
+                </ul>
+                <p>
+                    With the help of the “Legacy” electronic queue optimization system, adapted to your needs, you can improve the quality of service, achieve a high level of efficiency in the institution.
+                </p>
+            </div>
+            
+        </div>
+        <div class="business-conatiner-child">
+        <div class="business">
+            <div class="nav-bus">
+                <img src="{% static "./img/Vector.svg" %}" alt="">
+                <h3>Government agencies</h3>
+            </div>
+            <ul>
+                <li>Public service center</li>
+                <li>Tax authorities</li>
+            </ul>
+            <p>
+                With the help of the “Legacy” electronic queue optimization system, adapted to your needs, you can improve the quality of service, achieve a high level of efficiency in the institution.
+            </p>
+        </div>
+        
+        </div>
+        <div class="business-conatiner-child">
+            <div class="business">
+                <div class="nav-bus">
+                    <img src="{% static "./img/Vector (1).svg" %}" alt="">
+                    <h3>Medical centers</h3>
+                </div>
+                <ul id="iskl2">
+                    <li>Hospitals</li>
+                    <li>Dentistry</li>
+                    <li>Laboratories and analysis</li>
+                </ul>
+                <p>
+                    With the help of the “Legacy” electronic queue optimization system, adapted to your needs, you can improve the quality of service, achieve a high level of efficiency in the institution.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

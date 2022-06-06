@@ -23,18 +23,19 @@ def register(request):
     context = {'form': form}
     return render(request, 'register.html', context)
 
+def landing(request):
+    return render(request, 'landing.html')
 
+def product(request):
+    return render(request, 'product.html')
 
-# def update_status(object):
-#     t = dt.datetime.now()
-#     t1 = t.strftime("%H-%M")
-#     x = object.arriveTime
-#     t2 = x.strftime("%H-%M") 
-#     print(object)
-#     if t2 <= t1 and object.status == 'Active':
-#         object.status = 'Missed'
+def sectors(request):
+    return render(request, 'sectors.html')
 
-    
+def about(request):
+    return render(request, 'about.html')
+def profile(request):
+    return render(request, 'profile.html')
 
 # Talon creation
 def home(request):

@@ -1,0 +1,97 @@
+{% extends "baseland2.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="../static/css/albom.css">
+{% endblock head %}
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+  
+
+<section class="product">
+    <div class="product-text">
+        <h1>About Us</h1>
+        <p>We are a team of young specialists stydying at the senior year of Technical School of Innovation. The Electronic System is created in context of Final Interdisciplinary Project in its capacity as senior thesis. Our group consists of nine members , devided into small departments:</p>
+        <a href="#" class="nonline redB">Contact Us</a>
+    </div>
+    <div class="main-product">
+        <div class="person">
+            <img src="{% static "./img/atay.svg" %}" alt="">
+            <h1>Atai Abdikarimov</h1>
+            <h3>IT spicialist</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/sheff.svg" %}" alt="">
+            <h1>Marlen Kalilov</h1>
+            <h3>
+                Team leader <br>
+                IT spicialist
+            </h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/iimau.svg" %}" alt="">
+            <h1>Iman Chynybaev</h1>
+            <h3>IT spicialist</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/faruh.svg" %}" alt="">
+            <h1>Farhad Amanbaev</h1>
+            <h3>start-up manager</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/janai.svg" %}" alt="">
+            <h1>Janai Maatkabulova</h1>
+            <h3>marketing manager</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/nusup.svg" %}" alt="">
+            <h1>Sabira Zhumagulova</h1>
+            <h3>marketing manager</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/kidala.svg" %}" alt="">
+            <h1>Samat Asankoshoev</h1>
+            <h3>customer development manager</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/ba.svg" %}" alt="">
+            <h1>Begimai Amatova</h1>
+            <h3>graphic designer</h3>
+        </div>
+        <div class="person">
+            <img src="{% static "./img/hero.svg" %}" alt="">
+            <h1>Aijan Muhtar kyzy</h1>
+            <h3>social responsibility manager</h3>
+        </div>
+    </div>
+    <div class="onemore">
+        <h1>Our values</h1>
+        <ul>
+            <li>
+                <div class="imgg">
+                    <img src="{% static "./img/Arrow 3.svg" %}" alt="">
+                </div>
+                <div class="shiit">
+                    <a href="">Our system has a special feature for people with disabilities, the elderly and pregnant women, which will make it easier for them to skip the queue.</a>
+                </div>
+            </li>
+            <li>
+                <div class="imgg">
+                    <img src="{% static "./img/Arrow 3.svg" %}" alt="">
+                </div>
+                <div class="shiit">
+                    <a href="">Improving technology and product features, in short, balanced innovation. Our product was created using modern technologies and programs.</a>
+                </div>
+            </li>
+            <li>
+                <div class="imgg">
+                    <img src="{% static "./img/Arrow 3.svg" %}" alt="">
+                </div>
+                <div class="shiit">
+                    <a href="">Our product helps eliminate crowding in banks. This contributes to social protection, health protection of the client. This will ensure a healthy lifestyle and promote well-being for everyone at any age.</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+{% endblock content %}

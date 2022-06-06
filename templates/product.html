@@ -1,0 +1,66 @@
+{% extends "baseland2.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static "./css/styletwo.css" %}">
+
+{% endblock head %}
+
+{% block title %}
+  Product Page
+{% endblock title %}
+
+{% block content %}
+    <section class="product">
+        <div class="product-text">
+            <h1>Electronic Queue Management System</h1>
+            <p>Our system provides two-sided solution for managing the queues in bank sector. One side is for the administration , where our system helps to track productivity statistics of each branch of the bank. Another side is for clients, that allows one to take a service voucher in advance, while setting a comfortable time for him.</p>
+            <a href="#" class="nonline redB">Contact Us</a>
+        </div>
+        <div class="main-product">
+            <div class="imgdiv">
+                <img src="{% static './img/product1.svgz' %}" alt="">
+            </div>
+            <div id="right-product">
+                <h1>
+                    Service improvement
+                </h1>
+                <p>
+                    The write time function is based on client needs and <br> improves client experience. Improve customer <br> service through a flexible and efficient system
+                </p>
+            </div>
+            <div id="left-product ">
+                <h1>
+                    Decline in complaints
+                </h1>
+                <p>
+                    About 53% of customer complaints are due to <br> long queues. Waiting in line reduces client <br> complaints and increases client satisfaction
+                </p>
+            </div>
+            <div class="imgdiv">
+                <img src="{% static './img/product2.svgz' %}" alt="">
+            </div>
+            <div class="imgdiv">
+                <img src="{% static './img/product3.svgz' %}" alt="">
+            </div>
+            <div id="right-product">
+                <h1>
+                    Strengthening the <br> productivity of employees
+                </h1>
+                <p>
+                    Our system allows real-time monitoring of <br> employees' performance, allowing staff performance <br> to be evaluated and improved
+                </p>
+            </div>
+            <div id="left-product ">
+                <h1>
+                    Customer loyalty improvement
+                </h1>
+                <p>
+                    The Electronic Queue Management System will <br> improve your service and subsequently ensure <br> client loyalty
+                </p>
+            </div>
+            <div class="imgdiv">
+                <img src="{% static './img/product4.svgz' %}" alt="">
+            </div>  
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "baseland.html" %} {% load static %} {% block head %} 
+<link rel="stylesheet" href="{% static "./css/style.css" %}" />
+{% endblock head %} {% block title %} Main Landing Page {% endblock title %}
+{% block header %}
+<div class="mother-content">
+            <div class="left-header-content">
+                <div class="main-content">
+                    <div class="header-text">
+                        <h4>
+                            Electronic Queue <br> Management System
+                        </h4>
+                        <p>
+                            The greatest solution for your business
+                        </p>
+                    </div>
+                    <div class="header-buttons">
+                        <a id="red" href="">Create ticket</a>
+                        <a id="puprple" href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rigth-phone">
+                <img src="{% static './img/phone.svg' %}" alt="">
+            </div>
+        </div>
+{% endblock header %}
+
+{% block content %}
+
+<section class="apps">
+	<h3>Our app’s features</h3>
+	<div class="all-apps">
+		<div class="apps-shild">
+			<img src="{% static './img/Component 15.svg' %}" alt="" />
+			<h5>Setting time online</h5>
+			<p>
+				The system helps avoiding crowds <br />
+				and standing in long lines by <br />
+				setting time in advance
+			</p>
+		</div>
+		<div class="apps-shild">
+			<img src="{% static './img/Component 13.svg' %}" alt="" id="kosiak" />
+			<h5>Analysis of key indicators</h5>
+			<p>
+				The system analyzes the most <br />
+				requested brances and services with <br />
+				the time of their provision
+			</p>
+		</div>
+		<div class="apps-shild">
+			<img src="{% static './img/Component 14.svg' %}" alt="" />
+			<h5>Adding new functions</h5>
+			<p>
+				Our system has opportunity <br />
+				to add function by clients <br />
+				wish or needs
+			</p>
+		</div>
+		<div class="apps-shild">
+			<img src="{% static './img/Component 16.svg' %}" alt="" />
+			<h5>Integration possibility</h5>
+			<p>
+				Our team can integrate the <br />
+				electronic qeueu system in your <br />
+				existing app
+			</p>
+		</div>
+		<div class="apps-shild">
+			<img src="{% static './img/Component 17.svg' %}" alt="" />
+			<h5>Branding</h5>
+			<p>
+				Our mobile application has <br />
+				opportunity to adapt <br />
+				company’s branding
+			</p>
+		</div>
+		<div class="apps-shild">
+			<img src="{% static './img/Component 22.svg' %}" alt="" />
+			<h5>Online Web-page</h5>
+			<p>
+				We have developed a web <br />
+				page with a unique link that <br />
+				your clients can sign up to.
+			</p>
+		</div>
+	</div>
+</section>
+<section class="Business-sectors">
+	<h2>Business sectors</h2>
+	<img src="{% static './img/business-backround.svg' %}" id="iscl" alt="" />
+	<div class="business-conatiner">
+		<div class="business-conatiner-child">
+			<div class="business">
+				<div class="nav-bus">
+					<img src="{% static './img/fa_bank.svg' %}" alt="" />
+					<h3>Bank and Finance</h3>
+				</div>
+				<ul>
+					<li>Banks</li>
+					<li>Financial agencies</li>
+				</ul>
+				<a href="#">More...</a>
+			</div>
+		</div>
+		<div class="business-conatiner-child">
+			<div class="business">
+				<div class="nav-bus">
+					<img src="{% static './img/Vector.svg' %}" alt="" />
+					<h3>Government agencies</h3>
+				</div>
+				<ul>
+					<li>Public service center</li>
+					<li>Tax authorities</li>
+				</ul>
+				<a href="#">More...</a>
+			</div>
+		</div>
+		<div class="business-conatiner-child">
+			<div class="business">
+				<div class="nav-bus">
+					<img src="{% static './img/Vector (1).svg' %}" alt="" />
+					<h3>Medical centers</h3>
+				</div>
+				<ul id="iskl2">
+					<li>Hospitals</li>
+					<li>Dentistry</li>
+					<li>Laboratories and analysis</li>
+				</ul>
+				<a href="#">More...</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="form">
+	<div class="container-form">
+		<h1>Leave Your Comment Here</h1>
+		<input type="text" name="" id="name" placeholder="Name" />
+		<input type="text" name="" id="email" placeholder="Email" />
+		<textarea
+			name=""
+			id="cum"
+			cols="40"
+			rows="10"
+			placeholder="Type your text..."
+		></textarea>
+		<input type="submit" name="submit" id="redSubmit" placeholder="Comment" />
+	</div>
+</section>
+{% endblock content %}

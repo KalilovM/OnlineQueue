@@ -2,35 +2,35 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		{% block head %}{% endblock head %}
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		{% block head %}{% endblock %}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600&family=Cormorant:wght@300&family=Inconsolata&family=Spectral+SC:wght@200&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Inconsolata&family=Spectral+SC:wght@200&display=swap"
 			rel="stylesheet"
 		/>
-		<title>{% block title %}{% endblock title %}</title>
+		<title>{% block title %} {% endblock title %}</title>
 	</head>
 	<body>
-		<header>
-			<div class="navBar">
-				<img class="main-back" src="{% static './img/logoMain.svg' %}" alt="" />
-				<div class="logo">
-					<img src="{% static './img/Logo.svg' %}" alt="" />
-				</div>
-				<div class="navBar-child">
-					<ul>
-						<li><a class="nav-button" href="{% url 'profile' %}">Profile</a></li>
-						<li><a class="nav-button" href="{% url 'talon_changelist' %}">My tickets</a></li>
-						<li><a class="nav-button" href="{% url 'talon_add' %}">Create ticket</a></li>
-						<li><a class="nav-button login" href="{% url 'login' %}">Log in</a></li>
-					</ul>
-				</div>
-			</div>
-		</header>
+		 <header>
+        <div class="navBar">
+            <img class="main-back" src="{% static "./img/logoMain.svg" %}" alt="">
+            <div class="logo">
+                <img src="{% static "./img/Logo.svg" %}" alt="">
+            </div>
+            <div class="navBar-child">
+                <ul>
+                    <li><a class="nav-button" href="{% url 'product' %}">Our product</a></li>
+                    <li><a class="nav-button" href="{% url 'sectors' %}">Business sectors </a></li>
+                    <li><a class="nav-button" href="{% url 'about' %}">About Us</a></li>
+                    <li><a class="nav-button login" href="{% url 'login' %}">Log in</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
 		{% block content %} {% endblock %}
 

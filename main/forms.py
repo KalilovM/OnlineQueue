@@ -5,7 +5,7 @@ from .models import *
 import datetime as dt
 
 
-HOUR_CHOICES = [(dt.time(hour=x), '{:02d}:00'.format(x)) for x in range(0, 24)]
+HOUR_CHOICES = [(dt.time(hour=x), '{:02d}:00'.format(x)) for x in range(8, 20)]
 # todo create choices for the hour field from 9am to 6pm and also include 30 min intervals also for the time field add break time
 # from 12am to 1pm
 

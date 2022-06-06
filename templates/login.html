@@ -1,23 +1,45 @@
-{% extends 'base.html' %} {% block head %}
+{% extends "base.html" %} {% load static %} {% block head %}
 <link rel="stylesheet" href="../static/css/calendar.css" />
 {% endblock head %} {% block title %} Login {% endblock %} {% block content %}
 
-<h3>login</h3>
+<section class="welcome">
+	<div class="border-shadow">
+		<div class="left-img-cal">
+			<img src="{% static "./img/formIMG.svg" %}" alt="" />
+		</div>
+		<div class="rigth-form-cal">
+			<div class="odin">
+				<h1>Welcome!</h1>
+				<h3>Log in to your account to continue</h3>
+			</div>
+			<form method="POST">
+				<div class="dva">
+					{% csrf_token %} {% for field in form %}
+					<label>{{ field.label }}</label><br />
+					{{ field }} {% for error in field.errors %}
+					<small style="color: red">{{ error }}</small>
+					{% endfor %} {% endfor %}
+				</div>
+				<div class="tri">
+					<div class="checks">
+						<div class='checkbox'>
+							<input type="checkbox" id="scales" name="scales" />
+							<label for="scales">Remember me</label>
+						</div>
 
-<form method="POST" class="dva">
-	{% csrf_token %} {% for field in form %}
-
-	<label id="castyl" for="name">{{ field.label }}</label><br />
-	{{ field }} {% for error in field.errors %}
-	<small style="color: red">{{ error }}</small>
-	{% endfor %} {% endfor %}
-
-	<button type="submit" class="nonline" id="mainLogin">Login</button>
-	<div class="qu">
-		<a href="{% url 'register' %}" class="nonline top"
-			>Don’t have an account?</a
-		>
-		<a href="{% url 'register' %}" class="top"> Sign In</a>
+						<a id="fp" href="#">Forgot password?</a>
+					</div>
+					<button type="submit" class="nonline" id="mainLogin">Login</button>
+				</div>
+			</form>
+			<div class="chetyre">
+				<div class="qu">
+					<a href="#" class="nonline top">Don’t have an account?</a>
+					<a href="#" class="top"> Sign In</a>
+				</div>
+			</div>
+		</div>
 	</div>
-</form>
+</section>
+
 {% endblock %}
