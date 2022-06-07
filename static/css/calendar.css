@@ -182,9 +182,9 @@ body {
 }
 
 .tri {
-    font-size: 18px;
-    margin-top: -12%;
-    height: 70%;
+	position: relative;
+	font-size: 18px;
+	height:70%;
 }
 
 #fp {
