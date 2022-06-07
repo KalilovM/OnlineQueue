@@ -189,7 +189,7 @@ body {
 .tri button {
 	position: absolute;
 	transform: translate(-50%, -50%);
-	top: 35%;
+	top: 100%;
 	left: 50%;
 }
 
@@ -273,8 +273,7 @@ body {
 
 
 #mainLogin {
-    width: 127px;
-    height: 38px;
+
     font-size: 20px;
     padding: 10px 50px;
     border-radius: 50px;
@@ -283,10 +282,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%; */
 }
 
 /* FOOTER */
