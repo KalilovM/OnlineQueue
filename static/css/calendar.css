@@ -184,7 +184,7 @@ body {
 .tri {
 	position: relative;
 	font-size: 18px;
-	height: 70%;
+    height: 100px;
 }
 .tri button {
 	position: absolute;
