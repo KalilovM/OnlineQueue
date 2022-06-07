@@ -195,24 +195,7 @@ header{
 	left: 50%;
 }
 
-.checks {
-	padding-right: 15%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 
-}
-
-.checkbox{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-
-.checks input {
-	width: 25px;
-	height: 25px;
-}
 
 #mainLogin {
     font-size: 20px;
