@@ -135,6 +135,17 @@ body {
     padding: 0 20px;
 }
 
+select {
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    border-radius: 30px;
+    border: 3px solid rgba(122, 122, 122, 1);
+    margin: 5% 0;  
+    height: 80px;
+    padding: 0 20px;
+}
+
 
 
 #timu {

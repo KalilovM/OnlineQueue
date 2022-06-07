@@ -128,7 +128,7 @@ body {
 	height: 80px;
 	padding: 0 20px;
 }
-.create select {
+select {
 	font-size: 32px;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 1);
