@@ -23,7 +23,7 @@
 				</div>
 				<div class="navBar-child">
 					<ul>
-						<li><a class="nav-button" href="{% url 'user-update' %}">Profile</a></li>
+						<li><a class="nav-button" href="{% url 'user-update' pk=user.id %}">Profile</a></li>
 						<li><a class="nav-button" href="{% url 'talon_changelist' %}">My tickets</a></li>
 						<li><a class="nav-button" href="{% url 'talon_add' %}">Create ticket</a></li>
 					</ul>

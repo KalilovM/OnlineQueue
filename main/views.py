@@ -9,6 +9,13 @@ import datetime as dt
 import time
 from accounts.models import NewUser
 
+user_pk = 0
+def get_user_pk(request):
+    global user_pk
+    user_pk = request.user.pk
+    print(user_pk)
+    return user_pk
+
 # User creation view
 def register(request):
     if request.method == 'POST':
@@ -44,10 +51,11 @@ def home(request):
         Talon.update_status(i)
     psd = Talon.objects.filter(status='Passed')
     msd = Talon.objects.filter(status='Missed')
+
     context = {
         'acts' : act,
         'psds' : psd,
-        'msds' : msd
+        'msds' : msd,
     }
     return render(request, 'talon_list.html', context)
 
@@ -96,3 +104,5 @@ def UpdateUser(request, pk):
         'form' : form
     }
     return render(request,'user.html', context)
+
+

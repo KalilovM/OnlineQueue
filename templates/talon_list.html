@@ -12,7 +12,7 @@
 					><img src="{% static './img/circle-plus.svg' %}" alt="" />Create
 					new</a
 				>
-				<a href="#" id="grey"
+				<a href="{% url 'user-update' pk=user.id %}" id="grey"
 					><img src="{% static './img/person.svg' %}" alt="" />Go to my
 					profile</a
 				>

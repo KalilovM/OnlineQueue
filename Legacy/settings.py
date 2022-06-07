@@ -74,10 +74,10 @@ WSGI_APPLICATION = 'Legacy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd12cblgj18kirb',
-        'USER': 'vkfndxdnuxhpmr',
-        'PASSWORD': 'b9889e1b6292c4d536ea7f0102305ce0c818c999519ebde687c39304fd128577',
-        'HOST': 'ec2-52-44-13-158.compute-1.amazonaws.com',
+        'NAME': 'dfo69smo0c6u92',
+        'USER': 'wukasnkhszeiby',
+        'PASSWORD': '87cd4429511b0d1b59639345957cab18a3eadc2d4b8a3846f640f575985b1fe0',
+        'HOST': 'ec2-3-248-121-12.eu-west-1.compute.amazonaws.com',
         'PORT': '5432'
     }
 }

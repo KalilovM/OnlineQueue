@@ -56,3 +56,7 @@ class NewUser(AbstractBaseUser):
 
     def __str__(self):
         return self.username
+    
+    def get_absolute_url(self):
+        return '/user/%s/' % self.id
+    
