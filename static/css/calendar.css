@@ -184,22 +184,13 @@ body {
 .tri {
 	position: relative;
 	font-size: 18px;
-	height:70%;
+	height: 70%;
 }
-
-#fp {
-    float: right;
-    margin-right: 3%;
-    font-size: 18px;
-    color: rgba(0, 46, 149, 1);
-}
-
-.tri input {
-    margin-left: 5%;
-}
-
-.tri label {
-    color: rgba(0, 46, 149, 1);
+.tri button {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 35%;
+	left: 50%;
 }
 
 .checks {
@@ -219,6 +210,21 @@ body {
 .checks input {
 	width: 25px;
 	height: 25px;
+}
+
+#fp {
+	float: right;
+	margin-right: 3%;
+	font-size: 18px;
+	color: rgba(0, 46, 149, 1);
+}
+
+.tri input {
+	margin-left: 5%;
+}
+
+.tri label {
+	color: rgba(0, 46, 149, 1);
 }
 
 .chetyre {
