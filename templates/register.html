@@ -20,10 +20,10 @@
 				<small style="color: red">{{ error }}</small>
 				{% endfor %} {% endfor %}
 
-				<button type="submit" class="nonline" id="mainLogin">Sign Up</button>
+				<button type="submit" class="nonline" id="mainLogin">Sign In</button>
 				<div class="qu">
-					<a href="#" class="nonline top">Don’t have an account?</a>
-					<a href="#" class="top"> Sign In</a>
+					<a href="#" class="nonline top">Already have an account?</a>
+					<a href="{% url 'login' %}" class="top"> Sign Up</a>
 				</div>
 			</form>
 		</div>
