@@ -11,7 +11,142 @@
 }
 body {
     box-sizing: border-box;
+    position: relative;
 }
+
+/* ALERT */
+
+
+.error {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: #FFF;
+    width: 900px;
+    height: 434px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px rgba(181, 181, 181, 0.593);
+    display: none;
+    /*закоментируй дисалэй нон для появления алерта*/
+}
+
+.nonetime {
+    width: 80%;
+}
+
+.nonetime h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(0, 46, 149, 1);
+}
+
+.nonetime p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.nonebut {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;  
+    margin-top: 10%;
+}
+
+.nonebut a {
+    width: 245px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#dell {
+    background-color: rgba(189, 29, 69, 1);
+    color: #FFF;
+    justify-self: start
+}
+
+#lay {
+    border: 5px solid rgba(0, 46, 149, 1);
+    color: rgba(0, 46, 149, 1);
+    justify-self: end
+}
+
+.errortwo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: #FFF;
+    width: 900px;
+    height: 434px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px rgba(181, 181, 181, 0.593);
+    display: none;
+     /*закоментируй дисалэй нон для появления алерта*/
+}
+
+.tickD {
+    width: 80%;
+}
+
+.tickD h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(0, 46, 149, 1);
+}
+
+.tickD p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.tickbut {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;  
+    margin-top: 10%;
+}
+
+.tickbut a, input {
+    width: 245px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#suka {
+    justify-self: start;
+}
+
+#laytwo {
+    color: #fff;
+    background-color: rgba(0, 46, 149, 1);
+    justify-self: end
+}
+
 
 
 /* NAV BAR */

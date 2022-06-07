@@ -15,7 +15,7 @@ class UserRegistrationForm(UserCreationForm):
     username = forms.CharField(max_length=254, help_text='Required. Inform a valid username.')
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
-
+    
     class Meta:
         model = NewUser
         fields = ('email', 'username', 'password1', 'password2')

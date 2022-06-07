@@ -13,13 +13,12 @@ urlpatterns = [
     path('<int:pk>/', views.TalonUpdateView.as_view(), name='talon_change'),
     path('ajax/load-cities/', views.load_filial, name='ajax_load_filials'),
     path('<pk>/delete/', views.TalonDeleteView.as_view(), name='talon_delete'),
-    path('profile/', views.profile, name='profile'),
 
 
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
 
-    path('User/<int:pk>', views.UpdateUser, name='user-update'),
+    path('user/<int:pk>', views.UpdateUser, name='user-update'),
 
     path('',views.landing, name='home'),
     path('product/', views.product, name='product'),

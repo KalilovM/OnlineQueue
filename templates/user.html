@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
-</head>
-<body>
-    {{form}}
-</body>
-</html>
+{% extends 'base2.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static './css/profile.css' %}" />
+{% endblock head %} {% block title %}Talon List{% endblock %} {% block content%}
+<section class="welcome">
+        <div class="border-shadow">
+            <div class="head">
+                <h1> <a href="{% url 'talon_changelist' %}">< Back to tickets</a></h1>
+            </div>
+            <div class="marlen">
+                <div class="left-img-cal">
+                    <h1>Profile</h1>
+                    <img src="{% static "./img/profile.svg" %}" alt="">
+                </div>
+                <form method='post' class="rigth-form-cal">
+                    {% csrf_token %}
+                    <div class="dva">
+                        {{form}}
+                        <button type='submit' class="nonline" id="mainLogin">Save</button> 
+                    </div>
+                </form>  
+            </div>
+        </div>
+</section>
+{% endblock content %}
